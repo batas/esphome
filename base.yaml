@@ -12,7 +12,8 @@ logger:
   level: INFO
 
 ota:
-  - platform: esphome
+  - id: ota_default
+    platform: esphome
     password: ${password_ota}
 
 
