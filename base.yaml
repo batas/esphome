@@ -2,18 +2,18 @@ web_server:
   port: 80
   auth:
     username: admin
-    password: !secret password_server
+    password: ${password_server}
 
 api:
   encryption:
-    key: !secret api_key
+    key: ${api_key}
 
 logger:
   level: INFO
 
 ota:
   - platform: esphome
-    password: !secret password_ota
+    password: ${password_ota}
 
 
 captive_portal:
