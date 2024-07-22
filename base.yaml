@@ -1,0 +1,19 @@
+web_server:
+  port: 80
+  auth:
+    username: admin
+    password: ${password_server}
+
+api:
+  encryption:
+    key: ${password_ota}
+
+logger:
+  level: INFO
+
+ota:
+  - platform: esphome
+    password: ${password_ota}
+
+
+captive_portal:
