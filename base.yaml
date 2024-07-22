@@ -6,7 +6,7 @@ web_server:
 
 api:
   encryption:
-    key: ${password_ota}
+    key: ${api_key}
 
 logger:
   level: INFO
