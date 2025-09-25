@@ -3,6 +3,7 @@ esphome:
   friendly_name: ${friendly_name}
 
 web_server:
+  id: server_default
   port: 80
   auth:
     username: admin
