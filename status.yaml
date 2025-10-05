@@ -5,3 +5,4 @@ switch:
 binary_sensor:
   - platform: status
     name: "${name} :: status"
+    entity_category: "diagnostic"
