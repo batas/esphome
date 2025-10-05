@@ -6,33 +6,4 @@ sensor:
       - lambda: return x / 60.0;
     unit_of_measurement: minutes
     icon: "mdi:clock-start"
-
-  - platform: uptime
-    name: uptime
-    id: uptime_sensor
-    update_interval: 5s
-    icon: "mdi:clock-start"
-    internal: true
-    on_raw_value:
-      then:
-        - text_sensor.template.publish:
-            id: uptime_human
-            state: !lambda |-
-              int seconds = round(id(uptime_sensor).raw_state);
-              seconds = seconds % (24 * 3600);
-              int hours = seconds / 3600;
-              seconds = seconds % 3600;
-              int minutes = seconds /  60;
-              seconds = seconds % 60;
-              return (
-                (hours ? to_string(hours) + "h " : "") +
-                (minutes ? to_string(minutes) + "m " : "") +
-                (to_string(seconds) + "s")
-              ).c_str();
-
-text_sensor:
-  - platform: template
-    name: "${name} :: uptime (human readable)"
-    id: uptime_human
-    icon: "mdi:clock-start"
-    update_interval: 5s
+    entity_category: "diagnostic"
