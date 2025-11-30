@@ -1,8 +1,8 @@
 switch:
   - platform: restart
-    name: "${name} :: restart"
+    name: "restart"
 
 binary_sensor:
   - platform: status
-    name: "${name} :: status"
+    name: "status"
     entity_category: "diagnostic"
