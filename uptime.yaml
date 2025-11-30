@@ -1,9 +1,10 @@
 sensor:
   - platform: uptime
     id: esp_uptime
-    name: "${name} :: uptime"
+    name: uptime
     filters:
       - lambda: return x / 60.0;
     unit_of_measurement: minutes
     icon: "mdi:clock-start"
     entity_category: "diagnostic"
+    device_class: "duration"
