@@ -1,5 +1,6 @@
 switch:
   - platform: restart
+    id: restart_btn
     name: "restart"
 
 binary_sensor:
