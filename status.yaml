@@ -1,9 +1,12 @@
 button:
   - platform: restart
     id: restart_btn
-    name: "restart"
+    name: "Restart"
+    entity_category: "config"
+    icon: "mdi:restart"
 
 binary_sensor:
   - platform: status
-    name: "status"
+    name: "Status"
     entity_category: "diagnostic"
+    device_class: "connectivity"

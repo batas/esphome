@@ -1,10 +1,13 @@
 sensor:
   - platform: uptime
     id: esp_uptime
-    name: uptime
-    filters:
-      - lambda: return x / 60.0;
-    unit_of_measurement: minutes
-    icon: "mdi:clock-start"
+    name: "Uptime"
+    # Pozostawiamy w domyślnych sekundach ("s") - brak filtra.
+    # Dzięki temu Home Assistant natywnie przechwyci to przez device_class "duration" 
+    # i sam sformatuje na ładny, czytelny czas, np: "3 days, 15:20:00"
+    update_interval: 60s
+    icon: "mdi:timer-outline"
     entity_category: "diagnostic"
     device_class: "duration"
+    state_class: "measurement"
+    unit_of_measurement: "s"

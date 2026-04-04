@@ -5,4 +5,6 @@ sensor:
     update_interval: 60s
     icon: "mdi:wifi"
     device_class: "signal_strength"
-    
+    entity_category: "diagnostic"
+    state_class: "measurement"
+    unit_of_measurement: "dBm"
