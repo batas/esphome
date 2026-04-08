@@ -21,4 +21,4 @@ ota:
     platform: esphome
     password: ${password_ota}
 
-captive_portal:
+# captive_portal:
