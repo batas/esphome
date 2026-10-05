@@ -20,5 +20,6 @@ logger:
 ota:
   - id: ota_default
     platform: esphome
+    password: ${password_ota}
 
 # captive_portal:
