@@ -17,4 +17,8 @@ api:
 logger:
   level: INFO
 
+ota:
+  - id: ota_default
+    platform: esphome
+
 # captive_portal:

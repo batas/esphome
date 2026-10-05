@@ -1,3 +1,0 @@
-ota:
-  - id: ota_default
-    platform: esphome
